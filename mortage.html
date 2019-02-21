@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html  class="mortage">
+
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Karla|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:700|Noto+Sans+TC:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Moilu</title>
+    <link href="public/style.css" type="text/css" rel="stylesheet">
+
+  </head>
+
+<body>
+
+  <!-- Header -->
+  <header class="container">
+      <nav class="header">
+        <div class="logo">
+            <a href="./index.html"><img src="img/logoMoilu.jpg" class="frame" height="100" width="auto"></a>
+            <ul>
+              <li class="frame" id="buy"><a href="./buy.html">Buy</a></li>
+              <li class="frame" id="rent"><a href="./rent.html">Rent</a></li>
+              <li class="frame" id="sell"><a href="./sell.html">Sell</a></li>
+              <li class="current" id="Mortage"><a href="./mortage.html">Mortage</a></li>
+
+          </nav>
+
+  </header>
+
+  <div class="mortageCalcu">
+    <h1>Enter your loan data</h1>
+    <p>Loan Amount: <input id="loanAmount" type="number" min="1" max="1000000" onchange="computeLoan()">$</p>
+    <p>Down Payment: <input id="downPayment" type="number" min="1" max="900000" onchange="computeLoan()">$ </p>
+    <p>Loan Program: <input id="numberOfYears" type="number" min="1" max="30" value="5" step=".1" onchange="computeLoan()">Years</p>
+    <p>Interest Rate: <input id="annualInterestRate" type="number" min="0" max="15" value="1" step="1" onchange="computeLoan()">%</p>
+  <h2 id="monthlyPayment"></h2>
+  <h2 id="totalPayment"></h2>
+</div>
+
+
+
+
+
+
+  </body>
+
+  <script type="text/javascript" src="public/main.js"></script>
+
+</html>

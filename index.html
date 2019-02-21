@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Karla|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:700|Noto+Sans+TC:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Moilu</title>
+    <link href="public/style.css" type="text/css" rel="stylesheet">
+    <script src="public/handlebars.min.js"></script>
+    <script id="templateHB" type="text/x-handlebars-template">
+      {{#each imgBox}}
+
+           <section class="imgBox">
+          <img class="image" src="{{this.image}}" alt="{{this.price}}" >
+          <h3>{{this.price}}
+            <i class="fas fa-bed" id="bed">{{this.bed}}</i>
+            <i class="fas fa-bath" id="bath">{{this.bathroom}}</i>
+            <p>{{this.address}}<br>
+  {{this.city}}<br>{{this.postal}}</p>
+          </h3>
+        </section>
+        {{/each}}
+    </script>
+  </head>
+
+<body>
+
+  <!-- Header -->
+  <header class="container">
+      <nav class="header">
+        <div class="logo">
+            <a href="./index.html"><img src="img/logoMoilu.jpg" class="frame" height="100" width="auto"></a>
+            <ul>
+              <li class="frame" id="buy"><a href="./buy.html">Buy</a></li>
+              <li class="frame" id="rent"><a href="./rent.html">Rent</a></li>
+              <li class="frame" id="sell"><a href="./sell.html">Sell</a></li>
+              <li class="frame" id="Mortage"><a href="./mortage.html">Mortage</a></li>
+
+          </nav>
+
+  </header>
+
+  <!-- Cover Image -->
+    <div id="content">
+      <div  class="flex-container" id="banner" >
+        <div class="content2">
+          <h1>Find your home</h1>
+            <div class=flex-content>
+            <div class="box">
+
+    <!--Box Searcher-->
+                <section class="search-bar">
+                  <form action="source.html" method="get" id="searchform"/>
+                    <input placeholder="Enter an adress, neighborhood, city or ZIP code" type="search" name="search" pattern="[A-Za-z0-9]+">
+
+              <section class="filter">
+                <form>
+                  <select type="text" class="frame"  id="location" name="location">
+                    <option id="locationPlaceholder" value="" hidden="">LOCATION</option>
+                    <option value="suburbs">Suburbs</option>
+                    <option value="city-center">City Center</option>
+                    <option value="nearby-locations">Nearby locations</option>
+                  </select>
+
+               <section class="filter">
+                 <select class="frame" id="region" name="region">
+                   <option value="region" hidden="">REGION</option>
+                   <option value="alberta">Alberta</option>
+                   <option value="saskatchewan">Saskatchewan</option>
+                   <option value="manitoba">Manitoba</option>
+                   <option value="ontario">Ontario</option>
+                   <option value="quebec">Quebec</option>
+                   <option value="newbrunswick">New Brunswick</option>
+                   <option value="nova-soctia">Nova Scotia</option>
+                   <option value="prince">Prince Edward Island</option>
+                   <option value="newfound">Newfoundland and Labrador</option>
+                   <option value="british">British Columbia</option>
+                  </select>
+
+              <section class="filter">
+                <select class="frame" id="price" name="price">
+                   <option value="price" hidden="">PRICE</option>
+                   <option value="low">Low to High</option>
+                   <option value="1">59.000-100.000$</option>
+                   <option value="1">100.000-250.000$</option>
+                   <option value="1">250.000-500.000$</option>
+                   <option value="1">500.000-1.000.000$</option>
+                   <option value="1">1.000.000-2.000.000$</option>
+                   <option value="High">High to Low</option>
+                 </select>
+
+              <section class="filter">
+                <select class="frame" id="propertyType" name="propertyType">
+                    <option value="propertyType" hidden="">PROPERTY TYPE</option>
+                    <option value="House">House</option>
+                    <option value="bungalow">Bungalow</option>
+                    <option value="flat">Flat</option>
+                    <option value="land">Land</option>
+                    <option value="garage">Garage</option>
+                  </select>
+
+                 <selection class="filter">
+                   <select class="frame" id="bedrooms" name="bedrooms">
+                    <option value="bedrooms" hidden="">BEDROOMS</option>
+                    <option value="bedrooms">1</option>
+                    <option value="bedrooms">2</option>
+                    <option value="bedrooms">3</option>
+                    <option value="bedrooms">4</option>
+                    <option value="bedrooms">5</option>
+                    <option value="bedrooms">6</option>
+                  </select>
+
+                  <button type ="submit" class="button">
+                    <div class="frame">
+                      <p>SEARCH</p>
+
+                   </div>
+
+
+
+
+            </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="content3">
+  <div class="latest">
+    <h2>LATEST PROPERTIES</h2>
+  </div>
+</div>
+
+
+<article class="content3" >
+  <section class="flex-content" id="information">
+
+</section>
+</article>
+
+
+
+
+
+
+  </body>
+
+<footer class="footerBox">
+  <div class="aboutBox">
+    <h2>About us</h2>
+    <p>Who we are</p>
+    <br>
+    <p>Careers</p>
+    <br>
+    <p>Stats and Trends</p>
+
+  </div>
+  <div class="helpBox">
+    <h2>Help</h2>
+    <p>FAQ</p>
+    <br>
+    <p>Contact</p>
+    <br>
+    <p>Privacy policy</p>
+  </div>
+  <div class="exploreBox">
+    <h2>Explore Moilu</h2>
+    <p><img id="face" src="img/facebook.png" width="50px" height="50px"></p>
+    <br>
+    <p><img id="insta" src="img/instagram.png" width="60px" height="60px"></p>
+    <br>
+    <p><img id="twitter" src="img/twitter.png" width="70px" height="70px"></p>
+  </div>
+</footer>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="public/main.js"></script>
+
+</html>

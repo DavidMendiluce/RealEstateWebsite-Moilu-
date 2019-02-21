@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Karla|Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro:700|Noto+Sans+TC:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <title>Moilu</title>
+    <link href="public/style.css" type="text/css" rel="stylesheet">
+    <script src="public/handlebars.min.js"></script>
+    <script id="templateHB" type="text/x-handlebars-template">
+      <div class="rentBox">
+        <h2 class="imageText">{{location}}</h2>
+            <p>number of homes for sale {{homesForSale}}</p>
+        {{#each rentImage}}
+          <section class="rentImage">
+          <img class="image2" src="{{this.image}}" alt="{{this.price}}" width="400px" height="250px">
+          <h3>{{this.price}}
+            <i class="fas fa-bed" id="bed">{{this.bed}}</i>
+            <i class="fas fa-bath" id="bath">{{this.bathroom}}</i>
+            <p id="thisAdress">{{this.address}} {{this.city}} {{this.postal}}</p>
+          </h3>
+        </section>
+        {{/each}}
+    </div>
+    </script>
+  </head>
+
+<body id="rentBody">
+
+  <!-- Header -->
+  <header class="container">
+      <nav class="header">
+        <div class="logo" id="rentLogo">
+          <a href="./index.html"><img src="img/logoMoilu.jpg" class="frame" height="100" width="auto"></a>
+            <ul id="rentUl">
+              <li class="frame" id="buy"><a href="./buy.html">Buy</li>
+              <li class="current" id="rent"><a href="./rent.html">Rent</a></li>
+              <li class="frame" id="sell"><a href="./sell.html">Sell</li>
+              <li class="frame" id="Mortage"><a href="./mortage.html">Mortage</a></li>
+            </ul>
+          </nav>
+
+  </header>
+
+  <!--Second navegation bar-->
+  <div class="nav2">
+    <nav>
+        <form action="/search.html" method="GET">
+          <input id="search" placeholder="Enter an adress, neighborhood, city or ZIP code" type="search2" name="search" pattern="[A-Za-z0-9]+">
+
+            <ul>
+
+              <section class="filter">
+                <form>
+                  <select type="text" class="frame"  id="forRent" name="forRent">
+                    <option value="forRent" hidden="">For Rent</option>
+                    <option value="forSale">For Sale</option>
+                    <option value="listing">Potential Listing</option>
+                    <option value="sold">Recently Sold</option>
+                  </select>
+
+                 <section class="filter">
+                   <select class="frame" id="rentPrice" name="price">
+                      <option value="price" hidden="">Price</option>
+                      <option value="low">Low to High</option>
+                      <option value="1">59.000-100.000$</option>
+                      <option value="1">100.000-250.000$</option>
+                      <option value="1">250.000-500.000$</option>
+                      <option value="1">500.000-1.000.000$</option>
+                      <option value="1">1.000.000-2.000.000$</option>
+                      <option value="High">High to Low</option>
+                    </select>
+
+                 <section class="filter">
+                   <select class="frame" id="rentType" name="propertyType">
+                       <option value="propertyType" hidden="">Property Type</option>
+                       <option value="House">House</option>
+                       <option value="bungalow">Bungalow</option>
+                       <option value="flat">Flat</option>
+                       <option value="land">Land</option>
+                       <option value="garage">Garage</option>
+                     </select>
+
+                    <selection class="filter">
+                      <select class="frame" id="rentBed" name="bedrooms">
+                       <option value="bedrooms" hidden="">Bedrooms</option>
+                       <option value="bedrooms">1</option>
+                       <option value="bedrooms">2</option>
+                       <option value="bedrooms">3</option>
+                       <option value="bedrooms">4</option>
+                       <option value="bedrooms">5</option>
+                       <option value="bedrooms">6</option>
+                     </select>
+
+            </ul>
+
+
+
+
+  </nav>
+  </div>
+
+
+
+  <!-- rentBox -->
+    <div id="rentContent" class="row">
+      <div class="flex-container" id="information">
+
+
+
+
+</div>
+</div>
+</div>
+
+<h3>My Google Maps Demo</h3>
+<!--The div element for the map -->
+<div id="googlemapwrapper">
+<div position="fixed" height="500px" width="1000px">
+<div id="map" position="fixed" ></div>
+</div>
+</div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script>
+// Initialize and add the map
+
+function initMap() {
+  // The location of Uluru
+  var canada = {lat: 52.939915, lng: -106.450867};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: canada});
+      setMarkers(map);
+}
+
+
+var houses = [
+['700$/mo', 53.553543, -113.584634, 1 ],
+['900$/mo', 53.610181, -113.456373, 2 ],
+['1,700$/mo', 49.270872, -123.153781, 3 ],
+['500$/mo', 49.288796, -123.133897, 4],
+['2,000$/mo', 49.278469, -123.117509, 5],
+['1,200$/mo', 45.498031, -73.573183, 6],
+['800$/mo', 45.769604, -73.471479, 7],
+['3,200$/mo', 43.771685, -79.405552, 8],
+['600$/mo', 43.764385, -79.474549, 9],
+['1,400$/mo', 50.503030, -104.673949, 10]
+];
+
+function setMarkers(map) {
+var image = {
+url: 'img/icon.png',
+size: new google.maps.Size(20, 32),
+origin: new google.maps.Point(0, 0),
+anchor: new google.maps.Point(0, 32)
+};
+
+var shape = {
+coords: [1, 1, 1, 20, 18, 20, 18, 1],
+type: 'poly'
+};
+
+for (var i = 0; i < houses.length; i++) {
+var house = houses[i];
+var marker = new google.maps.Marker({
+  position: {lat: house[1], lng: house[2]},
+  map: map,
+  icon: image,
+  shape: shape,
+  title: house[0],
+  zIndex: house[3]
+});
+}
+}
+
+
+</script>
+
+
+
+  </body>
+
+
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJaZs4NgOHGH4zRyC29Nf2WmTB_e7fV2I&callback=initMap">
+  </script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="public/main.js"></script>
+
+</html>

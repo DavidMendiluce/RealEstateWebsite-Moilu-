@@ -1,0 +1,803 @@
+html {
+  height: 1750px;
+}
+
+
+body {
+
+  background-color: rgba(218, 218, 218, 0.2);
+  background-size: contain;
+  height: 100%;
+  width: 100%;
+
+
+}
+
+#rentBody {
+  background-color: white;
+}
+
+.logo {
+
+  margin-left: 290px;
+  margin-bottom: 100px;
+
+}
+
+#rentLogo {
+
+ margin-left: 0px;
+ margin-bottom: 100px;
+ position: absolute;
+ display: block;
+
+}
+
+
+
+.header li:hover {
+
+  font-family: 'Karla', sans-serif;
+  font-size: 17px;
+  color: #c0daff;
+  opacity: 0.9;
+
+}
+
+
+
+/*Header*/
+header {
+
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 10;
+  background-color: #1c202c;
+  border-bottom: 1px solid grey;
+  margin-top: 0px;
+  margin-bottom: 10px;
+
+}
+
+.nav2 {
+  position: fixed;
+  width: 95%;
+  height: 48px;
+  z-index: 10;
+  background-color: #cfe4f5;
+  border-bottom: 1px solid grey;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  overflow: hidden;
+
+}
+
+
+#rentUl {
+
+  overflow: hidden;
+  background-color: #1c202c;
+  float: right;
+  margin-right: 500px;
+  margin-top: 20px;
+
+}
+
+ul {
+
+  overflow: hidden;
+  background-color:#1c202c ;
+  float: right;
+  margin-right: 980px;
+  margin-top: 17px;
+  height: 30px;
+
+}
+
+
+.header li {
+
+  font-family: 'Karla', sans-serif;
+  font-size: 17px;
+  color: #ababab;
+  opacity: 0.9;
+
+}
+
+
+nav li {
+  display: inline;
+  margin-right: 70px;
+}
+
+.nav2 ul {
+  background-color: #cfe4f5;
+  margin-right: 945px;
+
+}
+
+.nav2 li {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  font-family: 'Karla', sans-serif;
+  font-size: 17px;
+  margin-right: 20px !important;
+  margin-left: 0;
+
+}
+
+#forRent {
+  position: absolute;
+  font-family: Arial;
+  width: 100px;
+  height: 30px;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+  font-family: 'Maven Pro';
+  font-size: 13px;
+  bottom: 6.5px;
+  left: 10px;
+  margin-left: 320px;
+
+}
+
+
+#rentPrice {
+  position: absolute;
+  font-family: Arial;
+  width:  100px;
+  height: 30px;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+  font-family: 'Maven Pro';
+  font-size: 13px;
+  bottom: 6.5px;
+  left: 10px;
+  margin-left: 450px;
+
+}
+
+#rentType {
+  position: absolute;
+  font-family: Arial;
+  width:  150px;
+  height: 30px;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+  font-family: 'Maven Pro';
+  font-size: 13px;
+  bottom: 6.5px;
+  left: 10px;
+  margin-left: 580px;
+
+}
+
+#rentBed {
+  position: absolute;
+  font-family: Arial;
+  width: 120px;
+  height: 30px;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+  font-family: 'Maven Pro';
+  font-size: 13px;
+  bottom: 6.5px;
+  left: 10px;
+  margin-left: 760px;
+
+}
+
+
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+
+}
+
+.frame {
+  cursor: pointer;
+
+}
+
+.current a {
+  cursor: pointer;
+  border-bottom: 3px solid #c0daff;
+  color: #c0daff;
+  padding-bottom: 7px;
+}
+
+
+#banner  {
+  height: 500px;
+  background-image: url("../img/Cover-Image.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-top: 70px;
+  z-index: 2px;
+  background-repeat:no-repeat;
+  position: relative;
+  padding-bottom: 100px;
+  display: hidden;
+
+ }
+
+ #banner2  {
+   height: 500px;
+   background-image: url("../img/coverImageSell.jpg");
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   padding-top: 70px;
+   z-index: 2px;
+   background-repeat:no-repeat;
+   position: relative;
+   padding-bottom: 100px;
+   display: hidden;
+   opacity: 0.9;
+
+  }
+
+ #banner #content {
+   margin: auto;
+   width: 100%;
+   background-color: white;
+
+ }
+
+ #banner2 #content {
+   margin: auto;
+   width: 100%;
+   background-color: white;
+
+ }
+
+ .content2 {
+   text-align: center;
+   position: relative;
+   top: 80px;
+
+ }
+
+   .content2 h1 {
+   margin-top: 155px;
+   font-family: 'Poppins', sans-serif;
+   font-size: 60px;
+   display: center;
+   color: white;
+
+ }
+
+ .box {
+   width: 1130px;
+   height: 225px;
+   background-color: white;
+   border-radius: 1px;
+   margin-top: 50px;
+   margin-left: 13px;
+   border: 1.5px solid grey;
+
+ }
+
+ .rentBox {
+   width: 850px;
+   height: 1450px;
+   background-color: white;
+   border-radius: 0.5px;
+   display: right;
+   margin-top: 90px;
+   margin-left: 1050px;
+   border: 0.5px solid black;
+
+ }
+
+.rentImage {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border-radius: 0.5px;
+  border: 0.5px solid black;
+  margin: 10px 10px;
+
+}
+
+.buyBox {
+  width: 850px;
+  height: 1450px;
+  background-color: white;
+  border-radius: 0.5px;
+  display: right;
+  margin-top: 90px;
+  margin-left: 1050px;
+  border: 0.5px solid black;
+
+}
+
+.buyImage {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border-radius: 0.5px;
+  border: 0.5px solid black;
+  margin: 10px 10px;
+
+}
+
+ input[type="search"] {
+  height: 60px;
+  width: 500px;
+  border-radius: 1.5px;
+  margin-right: 550px;
+  margin-top: 42px;
+  border: 1px solid #ababab;
+  display: center;
+
+}
+
+input[type="search2"] {
+ height: 30px;
+ width: 300px;
+ border-radius: 1.5px;
+ border: 1px solid #ababab;
+ display: center;
+ margin-top: 10px;
+ margin-left: 10px;
+
+
+}
+
+
+#location {
+  position: absolute;
+  font-family: Arial;
+  width: 225px;
+  height: 60px;
+  margin-left: 30px;
+  bottom: 100.7px;
+  border: 1px solid #ababab;
+  border-radius: 1.5px;
+  font-family: 'Maven Pro';
+  font-size: 13px;
+
+}
+
+
+ select {
+  color: #152c4d;
+
+}
+
+ option {
+  color: black;
+
+}
+#region {
+  position: absolute;
+  font-family: Arial;
+  width: 225px;
+  height: 60px;
+  margin-left: 300px;
+  bottom: 100.7px;
+  border: 1px solid #ababab;
+  border-radius: 1.5px;
+  font-family: 'Maven Pro';
+  font-size: 13px;
+
+}
+
+#price {
+  position: absolute;
+  font-family: Arial;
+  width: 225px;
+  height: 60px;
+  left: 54px;
+  bottom: 10px;
+  border: 1px solid #ababab;
+  border-radius: 1.5px;
+  font-family: 'Maven Pro';
+  font-size: 13px;
+
+}
+
+#propertyType {
+  position: absolute;
+  font-family: Arial;
+  width: 225px;
+  height: 60px;
+  left: 328px;
+  bottom: 10px;
+  border: 1px solid #ababab;
+  border-radius: 1.5px;
+  font-family: 'Maven Pro';
+  font-size: 13px;
+
+}
+
+#bedrooms {
+  position: absolute;
+  font-family: Arial;
+  width: 225px;
+  height: 60px;
+  left: 609px;
+  bottom: 10px;
+  border: 1px solid #ababab;
+  border-radius: 1.5px;
+  font-family: 'Maven Pro';
+  font-size: 13px;
+
+}
+
+.button {
+  position: absolute;
+  font-family: Arial;
+  width: 225px;
+  height: 60px;
+  left: 880px;
+  bottom: 10px;
+  background-color: #55adf4;
+  color: white;
+  border-radius: 6px;
+  font-family: 'Maven Pro';
+  font-size: 15px;
+
+
+}
+
+.frame p {
+  margin-top: 20px;
+}
+
+.image {
+  width: 400px;
+  height: 250px;
+  position: absolute;
+}
+
+.imgBox {
+  width: 400px;
+  height: 450px;
+  background-color: white !important;
+  border: 0.5px solid grey;
+  display: inline-flex;
+  margin-left: 165px;
+  margin-top: 50px;
+}
+
+
+.content3 h2 {
+text-align: center;
+font-size: 35px;
+font-family: 'Maven-pro', sans-serif;
+font-weight: 700;
+margin-top: 100px;
+display: center;
+color: #1c202c;
+
+}
+
+.content3 h3 {
+margin-top: 260px;
+margin-left: 20px;
+font-family: 'Poppins', sans-serif;
+font-weight:200;
+font-size: 25px;
+width: 111.2px;
+height: 70px;
+}
+
+
+
+.content3 p {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  margin-top: 100px;
+  color: black;
+  opacity: 0.6;
+  font-size: 18px;
+  bottom: -430px;
+}
+
+
+ #bath {
+   display: inline;
+   font-size: 15px;
+   opacity: 0.8;
+ }
+
+ #bed {
+   display: inline;
+   font-size: 15px;
+   opacity: 0.8;
+ }
+
+ .rentBox  h2 {
+
+   margin-left: 20px;
+   font-family: 'Poppins', sans-serif;
+
+ }
+
+ .rentBox p {
+
+   margin-left: 10px !important;
+   font-family: 'Poppins', sans-serif;
+
+ }
+
+ .buyBox h2 {
+
+   margin-left: 20px;
+   font-family: 'Poppins', sans-serif;
+ }
+
+ .buyBox p {
+
+   margin-left: 10px !important;
+   font-family: 'Poppins', sans-serif;
+
+ }
+
+ ul a:hover {
+
+   font-family: 'Karla', sans-serif;
+   font-size: 17px;
+   color: #c0daff;
+   opacity: 0.9;
+
+
+ }
+
+ ul a {
+   font-family: 'Karla', sans-serif;
+   font-size: 17px;
+   color: #ababab;
+   opacity: 0.9;
+   text-decoration: none;
+
+ }
+
+ #googlemapwrapper {
+  position: fixed;
+ }
+
+
+ #map {
+    /* The width is the width of the web page */
+   position: fixed;
+   display: block;
+   height: 810px;
+   width: 1043px;
+   bottom: 1500px;
+
+}
+
+ .row {
+   min-height: 200px;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-around;
+
+ }
+
+ .row2 {
+   min-height: 200px;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: space-around;
+
+ }
+
+.row h3 {
+  position: absolute;
+  font-family: 'Karla', sans-serif;
+  color: white;
+  right: 220px;
+  bottom: 0px;
+  top: 120px;
+  font-size: 22px;
+}
+
+#thisAdress {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  color: white;
+  font-size: 12px;
+  opacity: 0.6
+  right: 30px;
+}
+
+.row2 h3 {
+  position: absolute;
+  font-family: 'Karla', sans-serif;
+  color: white;
+  right: 260px;
+  bottom: 0px;
+  top: 120px;
+  font-size: 20px;
+}
+
+#thisAdress2 {
+  position: absolute;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  color: white;
+  font-size: 12px;
+  opacity: 0.6
+  right: 20px;
+}
+
+.mortageCalcu {
+  position: relative;
+  display: row;
+  width: 300px;
+  height: 320px;
+  left: 830px;
+  border: 1px solid black;
+  top: 250px;
+  background-color: white;
+
+}
+
+.mortageCalcu h1 {
+  font-size: 25px;
+  margin-left: 35px;
+  font-family:  'Karla', sans-serif;
+  text-decoration: underline;
+}
+
+.mortageCalcu p {
+  font-size: 15px;
+  margin-left: 40px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  margin-top: 20px;
+
+}
+
+#loanAmount {
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+#downPayment {
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+#numberOfYears {
+  border-radius: 5px;
+  margin-left: 10px;
+  width: 50px;
+}
+
+#annualInterestRate {
+  border-radius: 5px;
+  margin-left: 10px;
+  width: 50px;
+}
+
+#monthlyPayment {
+  font-size: 20px;
+  margin-left: 35px;
+  font-family:  'Karla', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+#totalPayment {
+  font-size: 20px;
+  margin-left: 35px;
+  font-family:  'Karla', sans-serif;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+  footer {
+  margin-top: 100px;
+  height: 404px;
+  display: flex;
+  wrap: nowrap;
+  justify-content: space-around;
+  background-size: 100%;
+  background-color: #2f3442;
+  opacity: 0.9
+
+}
+
+.aboutBox {
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  margin-top: 120px;
+
+}
+
+.helpBox {
+  width: 400px;
+  height: 200px;
+  margin-top: 120px;
+
+}
+
+.exploreBox {
+  width: 400px;
+  height: 200px;
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 120px;
+
+}
+
+
+
+.footerBox h2 {
+  font-size: 30px;
+  font-family:  'Karla', sans-serif;
+  margin-top: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+
+}
+
+.footerBox p {
+  text-align: center;
+  display: row;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.exploreBox h2 {
+  position: relative;
+  font-size: 30px;
+  font-family:  'Karla', sans-serif;
+  white-space: nowrap;
+  text-align: center;
+  left: 240px;
+  margin-top: 24px;
+  height: 60px;
+
+}
+
+.exploreBox p {
+  position: relative;
+  top: 100px;
+  margin-right: 100px;
+
+}
+
+#twitter {
+  position: relative;
+  margin-right: 0px;
+  bottom: 4.5px;
+  right: 40px;
+}
+
+
+#insta {
+  position: relative;
+  right: 30px;
+}
+
+#face {
+  position: relative;
+  right: 35px;
+  top: 3px;
+}
